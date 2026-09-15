@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My thango ❤️</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap');
+
+
+        /* =========================================
+           BASIC
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+
+            color: #4b2434;
+
+            font-family: 'DM Sans', sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    #ffffff 0%,
+                    #ffe8ef 35%,
+                    #ffd1df 100%
+                );
+
+            overflow-x: hidden;
+        }
+
+
+        /* =========================================
+           FLOATING HEARTS
+        ========================================= */
+
+        .bg-heart {
+            position: fixed;
+
+            bottom: -60px;
+
+            pointer-events: none;
+
+            opacity: 0.18;
+
+            z-index: 0;
+
+            animation:
+                floatHeart linear infinite;
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.18;
+            }
+
+            90% {
+                opacity: 0.18;
+            }
+
+            100% {
+                transform:
+                    translateY(-120vh)
+                    rotate(25deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================
+           MAIN CONTAINER
+        ========================================= */
+
+        .wrap {
+
+            width: min(820px, 92%);
+
+            margin: auto;
+
+            padding:
+                70px 0;
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        /* =========================================
+           LETTER CARD
+        ========================================= */
+
+        .card {
+
+            background:
+                rgba(255, 255, 255, 0.78);
+
+            backdrop-filter:
+                blur(18px);
+
+            -webkit-backdrop-filter:
+                blur(18px);
+
+            border:
+                1px solid
+                rgba(255, 255, 255, 0.9);
+
+            border-radius:
+                30px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(120, 35, 65, 0.16);
+
+            padding:
+                42px 42px 48px;
+
+            animation:
+                appear 1s ease;
+        }
+
+
+        @keyframes appear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* =========================================
+           HEADER
+        ========================================= */
+
+        .kicker {
+
+            text-align: center;
+
+            letter-spacing:
+                3px;
+
+            text-transform:
+                uppercase;
+
+            font-size:
+                12px;
+
+            color:
+                #a45a73;
+        }
+
+
+        h1 {
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            text-align:
+                center;
+
+            font-size:
+                clamp(
+                    38px,
+                    7vw,
+                    64px
+                );
+
+            margin:
+                10px 0 8px;
+
+            color:
+                #4b2434;
+        }
+
+
+        .subtitle {
+
+            text-align:
+                center;
+
+            color:
+                #92536a;
+
+            margin-bottom:
+                34px;
+        }
+
+
+        /* =========================================
+           LETTER TEXT
+        ========================================= */
+
+        .letter {
+
+            font-size:
+                17px;
+
+            line-height:
+                1.85;
+        }
+
+
+        .letter p {
+
+            margin:
+                0 0 22px;
+        }
+
+
+        /* =========================================
+           HIGHLIGHT
+        ========================================= */
+
+        .highlight {
+
+            margin:
+                30px 0;
+
+            padding:
+                24px;
+
+            border-radius:
+                22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255, 220, 231, 0.95),
+                    rgba(255, 244, 247, 0.98)
+                );
+
+            text-align:
+                center;
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            font-size:
+                22px;
+
+            color:
+                #632e43;
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(255, 255, 255, 0.6);
+
+            animation:
+                softPulse 3s ease-in-out infinite;
+        }
+
+
+        @keyframes softPulse {
+
+            0%,
+            100% {
+                transform:
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    scale(1.015);
+            }
+        }
+
+
+        /* =========================================
+           ENDING
+        ========================================= */
+
+        .end {
+
+            text-align:
+                center;
+
+            margin-top:
+                40px;
+
+            font-size:
+                29px;
+
+            font-family:
+                'Playfair Display',
+                serif;
+
+            color:
+                #6a3048;
+        }
+
+
+        .small {
+
+            text-align:
+                center;
+
+            color:
+                #9b6477;
+
+            font-size:
+                13px;
+
+            margin-top:
+                15px;
+        }
+
+
+        /* =========================================
+           HEART DIVIDER
+        ========================================= */
+
+        .divider {
+
+            text-align:
+                center;
+
+            font-size:
+                24px;
+
+            margin:
+                30px 0;
+
+            letter-spacing:
+                8px;
+
+            opacity:
+                0.7;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+            .wrap {
+
+                width:
+                    92%;
+
+                padding:
+                    35px 0;
+            }
+
+
+            .card {
+
+                padding:
+                    30px 22px 35px;
+
+                border-radius:
+                    25px;
+            }
+
+
+            .letter {
+
+                font-size:
+                    16px;
+
+                line-height:
+                    1.8;
+            }
+
+
+            .highlight {
+
+                font-size:
+                    20px;
+
+                padding:
+                    20px;
+            }
+
+
+            .end {
+
+                font-size:
+                    25px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         MUSIC
+
+         Keep music.mp3 in the SAME folder
+         as this index.html file.
+    ========================================== -->
+
+    <audio
+        id="audio"
+        autoplay
+        loop
+        preload="auto">
+
+        <source
+            src="music.mp3"
+            type="audio/mpeg">
+
+    </audio>
+
+
+
+    <!-- =========================================
+         MAIN WEBSITE
+    ========================================== -->
+
+    <div class="wrap">
+
+        <main class="card">
+
+
+            <!-- HEADER -->
+
+            <div class="kicker">
+
+                
+
+            </div>
+
+
+            <h1>
+
+                Sorry Thangooo 🥹❤️
+
+            </h1>
+
+
+            <div class="subtitle">
+
+                Please don't stay angry at meee 🫂
+
+            </div>
+
+
+
+            <!-- LETTER -->
+
+            <section class="letter">
+
+
+                <p>
+
+                    sorry mah pleaseeeee enna manichiduuuu 🥹😭
+                    eppo kuda edho nee en mela kovama irukura maari dhaan
+                    enaku feel aagudhu, na romba overthink pannuven adhannnnn 😭 .
+                    sorryyy mahhh 🥺 nee repost poduu pleaseee, stop lam pannadhaa 😭 ila force pannalaa 
+                    enaku adhu paakama iruka mudiyala mahh,
+                    pleaseeeee manichiduuuu 🫂❤️
+
+                </p>
+
+
+
+                <p>
+
+                    iniku lam epdi naal otradhe nu theriyala mahh 😭
+                    7th period vandha unta pesalam nu aasaya wait pannitu irundhen,
+                    aana andha Dhanalakshmi varala, adhukapram chem maam period eduthutanga 😭
+                    appove enaku semma erichal aayiduchu,
+                    unna paakanum pesanum nu dhaaa irundhen 
+                    na unmela vechi iruka love eppove mee reduce aagathu mahh 🥹❤️
+
+                </p>
+
+
+
+                <div class="highlight">
+
+                    “I literally can’t go even one moment
+                    without thinking about you mahhhh.” ❤️
+
+                </div>
+
+
+
+                <p>
+
+                    En mind full ah nee dhaan iruka 😭❤️
+                    naan konjam over-attached ah iruken nu enakum theriyum,
+                    but enna panradhu, unna romba romba romba romba romba romba romba pidikum mahh 🥹🫂 ( infinity )
+                    pogum varai pogalam la ilaa mah `
+                    ponna unkuda dha pogumm.
+
+                </p>
+
+
+
+                <p>
+
+                    andha repost ah ketadhu ennoda thappu dhaan,
+                    un thappu konjam kuda illa.
+                    It was just my misunderstanding.
+                    Adhukaga unna hurt pannirundha really sorry mahhh 🥺
+
+                </p>
+
+
+
+                <p>
+
+                    and na dhaan solran la,
+                    I’ll wait for you till eternity uk thattt 🥹❤️
+
+                    na un mela kovam paduven ah mahh,
+                    vaaipeyy illaaaa.
+
+                    Un mela naan epdi kovapaduven 😭
+                    ennoda thangom mela epdi kovapaduven ?
+                    nee enakku ivlo important ah irukumbodhu?
+
+                    Un mela kochikama naan vera yaaruta kochika poren 😭🫂
+
+                </p>
+
+
+
+                <div class="divider">
+
+                    ♡ ♥ ♡
+
+                </div>
+
+
+
+                <p>
+
+                    seriously mahhh, once again I’m sooo sorryyy.
+                    I miss you way too muchhh 😭❤️
+                    oru nimisham kuda unna nenakama pogala.
+
+                    Edhachum en message la nakal ah convey aayirundha sorryyy,
+                    naan apdi sollave illa mahh.
+
+                    Unna hurt panna enakku konjam kuda intention illa 🥹
+
+                </p>
+
+
+
+              
+
+
+
+                <div class="highlight">
+
+                    loveee you so muchhh mahhhh 🫂❤️
+
+                </div>
+
+
+
+                <p>
+
+                    and yes, naan romba clingy dhaan…
+                    because I’m way too much attached to youuu 🥹😭❤️
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- END -->
+
+            <div class="end">
+
+                Please smile again, mahhh 🥹❤️
+
+            </div>
+
+
+            <div class="small">
+
+                ur thangamaana paiyan made it for u hehhehehehehehee say love u in the chat pleaseeeeeeeeeeee 
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+
+        // ======================================
+        // FLOATING HEARTS
+        // ======================================
+
+        for (let i = 0; i < 20; i++) {
+
+            const heart =
+                document.createElement("span");
+
+            heart.className =
+                "bg-heart";
+
+            heart.textContent =
+                ["♡", "♥", "❤", "💗"][i % 4];
+
+            heart.style.left =
+                Math.random() * 100 + "%";
+
+            heart.style.fontSize =
+                (18 + Math.random() * 28) + "px";
+
+            heart.style.animationDuration =
+                (8 + Math.random() * 10) + "s";
+
+            heart.style.animationDelay =
+                (-Math.random() * 15) + "s";
+
+            document.body.appendChild(heart);
+        }
+
+
+
+        // ======================================
+        // AUTOMATIC MUSIC
+        // ======================================
+
+        const audio =
+            document.getElementById("audio");
+
+
+        // Volume
+
+        audio.volume = 1.0;
+
+
+
+        // ======================================
+        // TRY AUTOPLAY IMMEDIATELY
+        // ======================================
+
+        async function startMusic() {
+
+            try {
+
+                await audio.play();
+
+                console.log(
+                    "Music started automatically ❤️🎶"
+                );
+
+            }
+
+            catch (error) {
+
+                console.log(
+                    "Browser blocked autoplay."
+                );
+
+            }
+        }
+
+
+
+        // Start as soon as page loads
+
+        window.addEventListener(
+            "load",
+            startMusic
+        );
+
+
+
+        // ======================================
+        // AUTOPLAY FALLBACK
+        // ======================================
+        //
+        // Chrome / Edge may block sound when
+        // opening a webpage.
+        //
+        // If that happens, the FIRST interaction
+        // anywhere on the website starts the song.
+        //
+        // There is NO button.
+        // There are NO music controls.
+        // ======================================
+
+
+        async function unlockMusic() {
+
+            if (audio.paused) {
+
+                try {
+
+                    await audio.play();
+
+                    console.log(
+                        "Music started ❤️🎶"
+                    );
+
+                }
+
+                catch (error) {
+
+                    console.log(
+                        "Music could not start."
+                    );
+
+                }
+
+            }
+
+        }
+
+
+
+        // Mouse click
+
+        document.addEventListener(
+            "click",
+            unlockMusic,
+            { once: true }
+        );
+
+
+
+        // Mobile touch
+
+        document.addEventListener(
+            "touchstart",
+            unlockMusic,
+            { once: true }
+        );
+
+
+
+        // Keyboard
+
+        document.addEventListener(
+            "keydown",
+            unlockMusic,
+            { once: true }
+        );
+
+
+    </script>
+
+
+</body>
+
+</html>
